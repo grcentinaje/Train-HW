@@ -39,27 +39,20 @@ var config = {
             function(db){
             
                 var dbObj = db.val();
-                var freq = moment(dbObj.frequencyFB).format("m");
-                var startingTime = moment(dbObj.timeStartFB).format("HH:mm");
-                var nextTrain = moment(startingTime).add(freq, "m");
+                var startingTime = moment(dbObj.timeStartFB, "HH:mm");
+                var nextTrain = moment(startingTime).add(dbObj.frequencyFB, "m");
+                var time = moment(nextTrain).format("LT");
+                var minDiff = moment(nextTrain, "m").diff(moment(), "m");
 
-                console.log(freq);
-
-                // var timeNow = moment().unix();
-                // var freqOutput = moment(dbObj.earliestFB).add(parseInt(dbObj.frequencyFB), "m");
-                // var freqConv = moment(freq).format("s ss");
                 
-                // var militaryTime = moment(timeNow).format("HH:mm");
-
                 var newRow = $("<tr>");
                 newRow.append($("<td>" + dbObj.trainFB + '</td>'));
                 newRow.append($("<td>" + dbObj.destinationFB + '</td>'));
                 newRow.append($("<td>" + dbObj.frequencyFB + '</td>'));
-                newRow.append($("<td>" + nextTrain + '</td>'));
-            //   newRow.append($("<td>" + monthCount + '</td>'));
+                newRow.append($("<td>" + time + '</td>'));
+                newRow.append($("<td>" + minDiff + '</td>'));
 
               $("tbody").prepend(newRow);
-
             
             }
 
