@@ -1,0 +1,57 @@
+#wrapper {
+  width: 960px;
+  height: 900px;
+  margin: auto;
+}
+
+body {
+  background-image: url("Assets/Photos/banner-home-lg.jpg");
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-color: black;
+  color: white;
+}
+
+.jumbotron {
+    position: relative;
+  background: rgb(11, 51, 104);
+  opacity: .90;
+}
+
+#subTitle {
+  position: absolute;
+  right: 170px;
+  bottom: 85px;
+}
+
+#bartLogo {
+  width: 200px;
+  position: relative;
+  left: 130px;
+  bottom: 5px;
+
+}
+
+.card-header{
+    background: black;
+}
+
+label{
+    color: rgb(11, 51, 104);
+}
+
+th{
+    font-weight: bold;
+    color: rgb(11, 51, 104);
+    text-align: center;
+}
+
+#button{
+    background-color: rgb(11, 51, 104);
+    color: white;
+}
+
+td{
+  color: black;
+  text-align: center;
+}

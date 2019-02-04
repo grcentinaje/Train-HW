@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Reset Sheet -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+    <!-- Moment JS -->
+    <script src="momentjs.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='wrapper'>
+
+        <div class="jumbotron">
+             <img src="Assets/Photos/2000px-Bart-logo.svg.png" alt="Bart" id="bartLogo">
+            <br><br>
+            <h3 id='subTitle'>Bay Area Rapid Transit Schedule</h3>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Current Train Schedule</h3>
+            </div>
+            <div class="card-body">
+                <table class="table table-sm table-hover" id='employee-table'>
+                        <thead>
+                    <tr>
+                        <th scope="col">Train Name</th>
+                        <th scope="col">Destination</th>
+                        <th scope="col">Frequency</th>
+                        <th scope="col">Next Arrival</th>
+                        <th scope="col">Minutes Away</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Add Train</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Train Name</label>
+                        <input type="text" class="form-control" id="trainInput" aria-describedby="emailHelp"
+                            placeholder="Bart">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Destination</label>
+                        <input type="text" class="form-control" id="destinationInput" aria-describedby="emailHelp"
+                            placeholder="Daly City">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Frequency (min.)</label>
+                        <input type="text" class="form-control" id="frequencyInput" aria-describedby="emailHelp"
+                            placeholder="Frequency">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">First Train Time (military time)</label>
+                        <input type="text" class="form-control" id="timeInput" aria-describedby="emailHelp"
+                            placeholder="09:00AM">
+                    </div>
+
+                    <br>
+                    <button type="submit" class="btn btn-primary" id="button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="js.js"></script>
+
+</body>
+
+</html>
